@@ -39,7 +39,7 @@ const ProductDetailsPage = () => {
     return (
         <div className="container mx-auto px-4 py-8">
             <Link
-                to={product.category ? `/products/${product.category}` : "/"}
+                to= "/"
                 className="inline-flex items-center text-green-600 hover:underline mb-6"
             >
                 <ChevronLeft size={20} />

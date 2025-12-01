@@ -12,7 +12,7 @@ const Home = () => {
         fetchProducts();
     }, [fetchProducts]);
 
-    const [selectedCategory, setSelectedCategory] = useState("fruits-vegetables");
+    const [selectedCategory, setSelectedCategory] = useState("all");
     const [priceRange, setPriceRange] = useState({ min: 0, max: 100 });
     const [selectedDietaryNeeds, setSelectedDietaryNeeds] = useState([]);
     const [sortOption, setSortOption] = useState("most-popular");

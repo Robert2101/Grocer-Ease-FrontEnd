@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import useAppStore from "../store/appStore"; // Ensure path is correct
+import useAppStore from "../store/appStore";
 
 const Login = () => {
     const navigate = useNavigate();
     const {login} = useAppStore();
 
-    // Local state for form inputs
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [isLoading, setIsLoading] = useState(false);
@@ -20,7 +19,7 @@ const Login = () => {
         setIsLoading(false);
 
         if (success) {
-            navigate("/profile");
+            navigate("/");
         }
     };
 

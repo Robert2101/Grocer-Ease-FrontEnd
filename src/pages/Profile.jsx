@@ -1,15 +1,13 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
-import useAppStore from "../store/appStore.js"; // Ensure this path matches your file name
+import useAppStore from "../store/appStore.js"; 
 
 const Profile = () => {
     const navigate = useNavigate();
 
-    // Get user data and logout function from the store
     const { user, logout } = useAppStore();
 
-    // Redirect if user is not logged in
     useEffect(() => {
         if (!user) {
             toast.error("Please log in to view your profile.");
@@ -23,7 +21,6 @@ const Profile = () => {
         navigate("/");
     };
 
-    // Prevent rendering if user data is missing (avoids crash)
     if (!user) {
         return null;
     }

@@ -70,8 +70,6 @@ const useAppStore = create((set, get) => ({
             }
 
             const savedUser = await response.json();
-
-            // 4. Automatically log them in
             set({ isLoggedIn: true, user: savedUser });
             toast.success("Account created successfully!");
             return true;
@@ -111,63 +109,86 @@ const useAppStore = create((set, get) => ({
     logout: () => set({ isLoggedIn: false, user: null }),
 
     addToCart: (product) => {
-        set((state) => {
-            const existingItem = state.cartItems.find(
-                (item) => item.id === product.id
-            );
+        try {
+            if (!product || !product.id) {
+                throw new Error("Invalid product data");
+            }
 
-            if (existingItem) {
-                const updatedCart = state.cartItems.map((item) =>
+            const { cartItems } = get();
+
+            const existingItem = cartItems.find((item) => item.id === product.id);
+
+            const newCart = existingItem
+                ? cartItems.map((item) =>
                     item.id === product.id
                         ? { ...item, quantity: item.quantity + 1 }
                         : item
-                );
-                return { cartItems: updatedCart };
-            } else {
-                const newCart = [...state.cartItems, { ...product, quantity: 1 }];
-                return { cartItems: newCart };
-            }
-        });
-        toast.success(`${product.name} added to cart!`);
+                )
+                : [...cartItems, { ...product, quantity: 1 }];
+
+            set({ cartItems: newCart });
+            toast.success(`${product.name} added to cart!`);
+
+        } catch (error) {
+            console.error("Cart update failed:", error);
+            toast.error("Could not add item to cart.");
+        }
     },
 
     removeFromCart: (productId) => {
-        set((state) => ({
-            cartItems: state.cartItems.filter((item) => item.id !== productId),
-        }));
-        toast.error("Item removed from cart.");
+        try {
+            const { cartItems } = get();
+            const newCart = cartItems.filter((item) => item.id !== productId);
+
+            set({ cartItems: newCart });
+            toast.error("Item removed from cart.");
+        } catch (error) {
+            console.error("Failed to remove item:", error);
+        }
     },
 
     clearCart: () => {
-        set({ cartItems: [] });
+        try {
+            set({ cartItems: [] });
+        } catch (error) {
+            console.error("Failed to clear cart:", error);
+        }
     },
 
     incrementQuantity: (productId) => {
-        set((state) => ({
-            cartItems: state.cartItems.map((item) =>
+        try {
+            const { cartItems } = get();
+
+            const newCart = cartItems.map((item) =>
                 item.id === productId ? { ...item, quantity: item.quantity + 1 } : item
-            ),
-        }));
+            );
+
+            set({ cartItems: newCart });
+        } catch (error) {
+            console.error("Failed to increment quantity:", error);
+        }
     },
 
     decrementQuantity: (productId) => {
-        set((state) => {
-            const existingItem = state.cartItems.find(
-                (item) => item.id === productId
-            );
-            if (existingItem?.quantity === 1) {
-                return {
-                    cartItems: state.cartItems.filter((item) => item.id !== productId),
-                };
-            }
-            return {
-                cartItems: state.cartItems.map((item) =>
-                    item.id === productId
-                        ? { ...item, quantity: item.quantity - 1 }
-                        : item
-                ),
-            };
-        });
+        try {
+            const { cartItems } = get();
+
+            const existingItem = cartItems.find((item) => item.id === productId);
+
+            if (!existingItem) return; 
+            const newCart =
+                existingItem.quantity === 1
+                    ? cartItems.filter((item) => item.id !== productId)
+                    : cartItems.map((item) =>
+                        item.id === productId
+                            ? { ...item, quantity: item.quantity - 1 }
+                            : item
+                    );
+
+            set({ cartItems: newCart });
+        } catch (error) {
+            console.error("Failed to decrement quantity:", error);
+        }
     },
 }));
 

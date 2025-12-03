@@ -178,5 +178,385 @@
       "joined": "November 30, 2025",
       "id": "0tzA-o5"
     }
+  ],
+  "orders": [
+    {
+      "userEmail": "john.doe@example.com",
+      "date": "2025-12-03T07:36:34.162Z",
+      "items": [
+        {
+          "id": "p1",
+          "name": "Organic Avocado",
+          "price": 1.99,
+          "unit": "/ each",
+          "description": "Fresh, ripe organic avocado. Perfect for toast or guacamole.",
+          "image": "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=400&h=300&fit=crop",
+          "category": "fruits-vegetables",
+          "onSale": true,
+          "isOrganic": true,
+          "isGlutenFree": true,
+          "isVegan": true,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": "1.99",
+      "shippingDetails": {
+        "fullName": "John Doe",
+        "address": "SomeWhere",
+        "email": "john.doe@example.com"
+      },
+      "status": "shipping",
+      "id": 1
+    },
+    {
+      "userEmail": "john.doe@example.com",
+      "date": "2025-12-03T07:37:00.664Z",
+      "items": [
+        {
+          "id": "p2",
+          "name": "Fresh Strawberries",
+          "price": 3.49,
+          "unit": "/ kg",
+          "description": "Sweet, juicy strawberries. Great for desserts or snacks.",
+          "image": "https://images.unsplash.com/photo-1464454709131-ffd692591ee5?w=400&h=300&fit=crop",
+          "category": "fruits-vegetables",
+          "isOrganic": false,
+          "isGlutenFree": true,
+          "isVegan": true,
+          "quantity": 2
+        }
+      ],
+      "totalAmount": "6.98",
+      "shippingDetails": {
+        "fullName": "John Doe",
+        "address": "SomeWhere",
+        "email": "john.doe@example.com"
+      },
+      "status": "shipping",
+      "id": 2
+    },
+    {
+      "userEmail": "john.doe@example.com",
+      "date": "2025-12-03T07:42:48.893Z",
+      "items": [
+        {
+          "id": "p5",
+          "name": "Organic Bananas",
+          "price": 0.59,
+          "unit": "/ kg",
+          "description": "Fresh, organic bananas. Perfect for smoothies or a quick snack.",
+          "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=400&h=300&fit=crop",
+          "category": "fruits-vegetables",
+          "isOrganic": true,
+          "isGlutenFree": true,
+          "isVegan": true,
+          "quantity": 1
+        },
+        {
+          "id": "p6",
+          "name": "Organic Carrots",
+          "price": 1.49,
+          "unit": "/ bag",
+          "description": "A bag of organic whole carrots. Great for roasting or salads.",
+          "image": "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?w=400&h=300&fit=crop",
+          "category": "fruits-vegetables",
+          "isOrganic": true,
+          "isGlutenFree": true,
+          "isVegan": true,
+          "quantity": 1
+        },
+        {
+          "id": "p10",
+          "name": "Free-range Eggs",
+          "price": 3.79,
+          "unit": "/ dozen",
+          "description": "A dozen Grade A large free-range eggs.",
+          "image": "https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=400&h=300&fit=crop",
+          "category": "dairy-eggs",
+          "isOrganic": false,
+          "isGlutenFree": true,
+          "isVegan": false,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": "5.87",
+      "shippingDetails": {
+        "fullName": "John Doe",
+        "address": "SomeWhere",
+        "email": "john.doe@example.com"
+      },
+      "status": "Processing",
+      "id": 3
+    },
+    {
+      "userEmail": "john.doe@example.com",
+      "date": "2025-12-03T16:13:38.171Z",
+      "items": [
+        {
+          "id": "p1",
+          "name": "Organic Avocado",
+          "price": 1.99,
+          "unit": "/ each",
+          "description": "Fresh, ripe organic avocado. Perfect for toast or guacamole.",
+          "image": "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=400&h=300&fit=crop",
+          "category": "fruits-vegetables",
+          "onSale": true,
+          "isOrganic": true,
+          "isGlutenFree": true,
+          "isVegan": true,
+          "quantity": 4
+        },
+        {
+          "id": "p3",
+          "name": "Asparagus Bunch",
+          "price": 2.99,
+          "unit": "/ bunch",
+          "description": "Tender green asparagus. Excellent steamed or roasted.",
+          "image": "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=400&h=300&fit=crop",
+          "category": "fruits-vegetables",
+          "isOrganic": false,
+          "isGlutenFree": true,
+          "isVegan": true,
+          "quantity": 2
+        }
+      ],
+      "totalAmount": "13.94",
+      "shippingDetails": {
+        "fullName": "John Doe",
+        "address": "SomeWhere",
+        "email": "john.doe@example.com"
+      },
+      "status": "Processing",
+      "id": 4
+    },
+    {
+      "userEmail": "john.doe@example.com",
+      "date": "2025-12-03T16:14:59.973Z",
+      "items": [
+        {
+          "id": "p5",
+          "name": "Organic Bananas",
+          "price": 0.59,
+          "unit": "/ kg",
+          "description": "Fresh, organic bananas. Perfect for smoothies or a quick snack.",
+          "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=400&h=300&fit=crop",
+          "category": "fruits-vegetables",
+          "isOrganic": true,
+          "isGlutenFree": true,
+          "isVegan": true,
+          "quantity": 1
+        },
+        {
+          "id": "p11",
+          "name": "Artisan Sourdough",
+          "price": 5.99,
+          "unit": "/ loaf",
+          "description": "A freshly baked artisanal sourdough loaf with a crispy crust.",
+          "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&h=300&fit=crop",
+          "category": "bakery",
+          "isOrganic": false,
+          "isGlutenFree": false,
+          "isVegan": true,
+          "quantity": 4
+        }
+      ],
+      "totalAmount": "24.55",
+      "shippingDetails": {
+        "fullName": "John Doe",
+        "address": "SomeWhere",
+        "email": "john.doe@example.com"
+      },
+      "status": "Processing",
+      "id": 5
+    },
+    {
+      "userEmail": "john.doe@example.com",
+      "date": "2025-12-03T16:17:46.106Z",
+      "items": [
+        {
+          "id": "p8",
+          "name": "Salmon Fillet",
+          "price": 15.99,
+          "unit": "/ kg",
+          "description": "Fresh Atlantic salmon fillet, rich in Omega-3s.",
+          "image": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=400&h=300&fit=crop",
+          "category": "meat-seafood",
+          "isOrganic": false,
+          "isGlutenFree": true,
+          "isVegan": false,
+          "quantity": 1
+        },
+        {
+          "id": "p9",
+          "name": "Organic Milk",
+          "price": 4.59,
+          "unit": "/ gallon",
+          "description": "One gallon of organic 2% reduced-fat milk.",
+          "image": "https://images.unsplash.com/photo-1563636619-e9143da7973b?w=400&h=300&fit=crop",
+          "category": "dairy-eggs",
+          "isOrganic": true,
+          "isGlutenFree": true,
+          "isVegan": false,
+          "quantity": 1
+        },
+        {
+          "id": "p12",
+          "name": "Gluten-Free Bread",
+          "price": 7.49,
+          "unit": "/ loaf",
+          "description": "Soft and delicious gluten-free bread, perfect for sandwiches.",
+          "image": "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=400&h=300&fit=crop",
+          "category": "bakery",
+          "isOrganic": false,
+          "isGlutenFree": true,
+          "isVegan": true,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": "28.07",
+      "shippingDetails": {
+        "fullName": "John Doe",
+        "address": "India",
+        "email": "john.doe@example.com"
+      },
+      "status": "Processing",
+      "id": 6
+    },
+    {
+      "userEmail": "john.doe@example.com",
+      "date": "2025-12-03T16:54:58.987Z",
+      "items": [
+        {
+          "id": "p3",
+          "name": "Asparagus Bunch",
+          "price": 2.99,
+          "unit": "/ bunch",
+          "description": "Tender green asparagus. Excellent steamed or roasted.",
+          "image": "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=400&h=300&fit=crop",
+          "category": "fruits-vegetables",
+          "isOrganic": false,
+          "isGlutenFree": true,
+          "isVegan": true,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": "2.99",
+      "shippingDetails": {
+        "fullName": "John Doe",
+        "address": "SomeWhere",
+        "email": "john.doe@example.com"
+      },
+      "status": "Processing",
+      "id": 7
+    },
+    {
+      "userEmail": "john.doe@example.com",
+      "date": "2025-12-03T16:57:28.156Z",
+      "items": [
+        {
+          "id": "p10",
+          "name": "Free-range Eggs",
+          "price": 3.79,
+          "unit": "/ dozen",
+          "description": "A dozen Grade A large free-range eggs.",
+          "image": "https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=400&h=300&fit=crop",
+          "category": "dairy-eggs",
+          "isOrganic": false,
+          "isGlutenFree": true,
+          "isVegan": false,
+          "quantity": 2
+        }
+      ],
+      "totalAmount": "7.58",
+      "shippingDetails": {
+        "fullName": "John Doe",
+        "address": "SomeWhere",
+        "email": "john.doe@example.com"
+      },
+      "status": "Processing",
+      "id": 8
+    },
+    {
+      "userEmail": "john.doe@example.com",
+      "date": "2025-12-03T17:09:22.752Z",
+      "items": [
+        {
+          "id": "p1",
+          "name": "Organic Avocado",
+          "price": 1.99,
+          "unit": "/ each",
+          "description": "Fresh, ripe organic avocado. Perfect for toast or guacamole.",
+          "image": "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=400&h=300&fit=crop",
+          "category": "fruits-vegetables",
+          "onSale": true,
+          "isOrganic": true,
+          "isGlutenFree": true,
+          "isVegan": true,
+          "quantity": 2
+        },
+        {
+          "id": "p2",
+          "name": "Fresh Strawberries",
+          "price": 3.49,
+          "unit": "/ kg",
+          "description": "Sweet, juicy strawberries. Great for desserts or snacks.",
+          "image": "https://images.unsplash.com/photo-1464454709131-ffd692591ee5?w=400&h=300&fit=crop",
+          "category": "fruits-vegetables",
+          "isOrganic": false,
+          "isGlutenFree": true,
+          "isVegan": true,
+          "quantity": 2
+        }
+      ],
+      "totalAmount": "10.96",
+      "shippingDetails": {
+        "fullName": "John Doe",
+        "address": "Guntur",
+        "email": "john.doe@example.com"
+      },
+      "status": "Processing",
+      "id": 9
+    },
+    {
+      "userEmail": "john.doe@example.com",
+      "date": "2025-12-03T17:23:16.670Z",
+      "items": [
+        {
+          "id": "p1",
+          "name": "Organic Avocado",
+          "price": 1.99,
+          "unit": "/ each",
+          "description": "Fresh, ripe organic avocado. Perfect for toast or guacamole.",
+          "image": "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=400&h=300&fit=crop",
+          "category": "fruits-vegetables",
+          "onSale": true,
+          "isOrganic": true,
+          "isGlutenFree": true,
+          "isVegan": true,
+          "quantity": 3
+        },
+        {
+          "id": "p4",
+          "name": "Tomatoes on the Vine",
+          "price": 2.29,
+          "unit": "/ kg",
+          "description": "Vine-ripened tomatoes, full of flavor.",
+          "image": "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=400&h=300&fit=crop",
+          "category": "fruits-vegetables",
+          "isOrganic": false,
+          "isGlutenFree": true,
+          "isVegan": true,
+          "quantity": 3
+        }
+      ],
+      "totalAmount": "12.84",
+      "shippingDetails": {
+        "fullName": "John Doe",
+        "address": "SRM university, Amaravati",
+        "email": "john.doe@example.com"
+      },
+      "status": "Processing",
+      "id": 10
+    }
   ]
 }

@@ -9,7 +9,7 @@ const Layout = () => {
             <Toaster position="top-center" richColors />
             <Navbar />
             <main className="flex-grow container mx-auto px-4 py-8">
-                <Outlet /> {/* This is where your page content will be rendered */}
+                <Outlet />
             </main>
             <Footer />
         </div>

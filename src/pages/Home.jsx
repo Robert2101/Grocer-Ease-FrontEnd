@@ -158,7 +158,6 @@ const Home = () => {
                     </select>
                 </div>
 
-                {/* Breadcrumb */}
                 <p className="text-sm text-gray-500 mb-4">
                     <Link to="/" className="hover:underline">
                         Home
@@ -170,7 +169,6 @@ const Home = () => {
                     </span>
                 </p>
 
-                {/* Products */}
                 {sortedProducts.length === 0 ? (
                     <p className="text-center text-xl text-gray-600 py-12">
                         No products found matching your filters.

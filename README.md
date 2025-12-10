@@ -1,16 +1,79 @@
-# React + Vite
+# Grocer-Ease Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Quick start
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Prerequisites
+- Node.js (recommended v16+ or latest LTS)
+- npm (or yarn)
 
-## React Compiler
+Local development
+1. Install dependencies:
+   npm install
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. Start the dev server:
+   npm run dev
 
-## Expanding the ESLint configuration
+3. Build for production:
+   npm run build
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+Note: This repository uses Vite and Tailwind CSS. Check `package.json` for exact scripts and dependencies.
+
+## Project structure (top-level files)
+
+- .gitignore
+  - Lists files and folders Git should ignore (node_modules, build artifacts, env files, etc.).
+
+- README.md
+  - This file. Use it as the main project summary and quick-start guide.
+
+- db.json
+  - Local mock data file (JSON). Commonly used with json-server for local API mocking:
+    npx json-server --watch db.json --port 5001
+  - Contains sample data used by the frontend during development.
+
+- eslint.config.js
+  - ESLint configuration for code linting rules. Ensures consistent style and catches common problems.
+
+- index.html
+  - HTML entry point used by Vite. It usually mounts the front-end app (via a root div or similar).
+
+- package.json
+  - Project metadata, dependencies, and npm scripts. Look here for exact commands (dev, build, serve, lint, test).
+
+- package-lock.json
+  - npm lockfile to ensure repeatable installs with exact dependency versions.
+
+- postcss.config.js
+  - PostCSS configuration. Typically used to configure Tailwind CSS and other PostCSS plugins.
+
+- tailwind.config.js
+  - Tailwind CSS configuration file. Defines theme customizations, purge paths, and plugins.
+
+- vite.config.js
+  - Vite configuration. Controls dev server, build options, and plugin usage.
+
+- public/
+  - Static assets served as-is. Common contents: favicon, robots.txt, static images. Files here are copied to the build output.
+
+- src/
+  - Application source code (components, pages, styles, utilities). This is where the main work happens. Explore subfolders to find React/Vue/Svelte components, routes, and CSS files.
+
+## Typical development notes
+
+- Mock API: If you want to use the included `db.json` as a development API, install json-server:
+  npx json-server --watch db.json --port 5001
+  Then adjust the frontend API base URL to point to http://localhost:5001.
+
+- Linting: Run linting per the scripts in `package.json` (e.g., npm run lint). ESLint config lives in `eslint.config.js`.
+
+- Styling: Tailwind is configured in `tailwind.config.js` and usually enabled via `postcss.config.js`.
+
+## Contributing
+
+- Open an issue to discuss features or bugs.
+- Fork and open pull requests for fixes and features.
+- Keep changes small and focused, and follow existing code style and lint rules.
+
+
